@@ -1,0 +1,18 @@
+
+
+body {
+    text-align: center;
+}
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100px;
+    margin: 0;
+    padding: 4px;
+    padding-bottom: 5%;
+    border: 2px 0;
+    border-radius: 12px;
+    background-color: skyblue;
+}
