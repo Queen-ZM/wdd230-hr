@@ -1,13 +1,20 @@
-let currentYear = new Date().getFullYear();
+const currentYear = new Date().getFullYear();
 document.querySelector(".current-year").innerHTML = currentYear;
 
-let lastModified = document.lastModified;
+const lastModified = document.lastModified;
 document.querySelector(".last-modified").innerHTML = lastModified;
 
 
 const currentTemp = document.querySelector("#current-temp");
-const weatherIcon = document.querySelector("#weather-icon");
+
+const img = document.createElement("img");
+const figure = document.querySelector("figure");
+figure.appendChild(img);
+const figcaption = document.createElement("figcaption");
+figure.appendChild(figcaption);
 const captionDesc = document.querySelector("figcaption");
+
+const weatherIcon = document.querySelector("#weather-icon");
 
 const url = "https://api.openweathermap.org/data/2.5/weather?q=Johannesburg,sa&unit=metric&appid=7fae69e9db7f6cc9a7268bfc37203f6b"
 
@@ -29,7 +36,7 @@ async function apiFetch() {
 }
 
 function displayResults(weatherData) {
-    currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(1)}</strong>`;
+    currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
 
 
     const iconSrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
@@ -37,7 +44,7 @@ function displayResults(weatherData) {
 
     weatherIcon.setAttribute("src", iconSrc);
     weatherIcon.setAttribute("alt", desc);
-    captionDesc.textContent = capitalizeStr(desc);
+    captionDesc.textContent = desc.toUpperCase();
 }
 
 function capitalize(word) {
