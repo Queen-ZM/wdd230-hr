@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="barra lighthouse chamber website">
+    <link rel="stylesheet" href="styles/small.css">
+    <link rel="stylesheet" href="styles/medium.css">
+    <link rel="stylesheet" href="styles/large.css">
+   
+    <title>Ubuntu Chamber | Home</title>
+</head>
+
+<body>
+    <header>
+        <img id="logo" src="./images/logo.png" alt="logo" width="100px" height="100px">
+        <h1>My City</h1>
+        <h2>Chamber of Commerce</h2>
+        <img id="facebook" src="./images/facebook.png" alt="Facebook">
+        <img id="instagram" src="./images/instagram.png" alt="Instagram">
+        <button id="menuButton">&#9776;</button>
+        <nav id="primaryNav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="discover.html">Discover</a></li>
+                <li><a href="directory.html">Directory</a></li>
+                <li><a href="join.html">Join</a></li>
+                <li><a href="#">Contact</a></li>
+            </ul>
+        </nav>
+        <p class="Currentdate"></p>
+    </header>
+
+    <main>
+        <section id="hero">
+            <h3>Welcome to Jozi!</h3>
+            <img src="images.jpg" alt="">
+
+            <button class="join-bt" onclick="window.location.href='join.html';">Join the Chamber</button>
+        </section>
+
+        <section id="event">
+            <h4>Event<span class="message1"></span></h4>
+        </section>
+        <section id="weather">
+
+            <h3>Weather</h3>
+
+            <p class="temperature"><span id="current-temp"></span>°C</p>
+        
+
+
+
+            <hr />
+            <p id="status"></p>
+
+
+            <p id="wind-speed">
+                Wind Speed: <span class="wind-speed"></span><span> mph</span>
+            </p>
+            <p id="wind-chill">Wind Chill: <span class="wind-chill"></span></p>
+
+
+        </section>
+        <section id="joinUs">
+            <button class="join-btn" onclick="window.location.href='join.html';">Join Us!</button>
+            <p id="joinP">
+                Let Us help you as you grow not only your business even so as you welcome people to your city, thru your establishment.
+            </p>
+        </section>
+        <section id="newsRelease">
+            <h4>News release</h4>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam eget
+                ligula eu lectus lobortis condimentum. Aliquam nonummy auctor massa.
+                Pellentesque habitant morbi tristique senectus et netus et malesuada
+                fames ac turpis egestas. Nulla at risus. Quisque purus magna, auctor
+                et, sagittis ac, posuere eu, lectus. Nam mattis, felis ut adipiscing.
+            </p>
+        </section>
+        <section id="spotlight">
+            <article>
+                Spokie and Daughters
+                <p><span>"African Fashion Design's"</span></p>
+                <img src="images/sad.jpg" alt="S&D logo" width="60">
+
+                <p>+27 73 764 0364</p>
+                <p><span>https://queen-zm.github.io/wwr/s&d/home.html</span></p>
+            </article>
+
+            <article>
+                Gold Reef City
+                <p><span>"The best Theme park in Africa"</span></p>
+                <img src="images/gold.jpg" alt="thankful" width="60">
+
+                <p>+27 11 248 6800</p>
+                <p><span>https://www.goldreefcity.co.za</span></p>
+            </article>
+            <article>
+                Vilakazi Street
+                <p><span>"Come view the only street in the world<br>
+                          that houses two Noble price winners"</span></p>
+                <img src="images/vilakazi-street.jpg" alt="Logo" width="60">
+                <p>+27 11 720 5678</p>
+                <p><span>contact@vilakazistreet.com</span></p>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <img src="images/logo.png" alt="logo" />
+
+        <div class="address">
+            <h4>My City Chamber of Commerce</h4>
+            <p>161 Umjelo Cresent, Gauteng 1475</p>
+        </div>
+        <div class="contact">
+            <p>info@mycity.org.za</p>
+            <p>+27 78 294 3692</p>
+            <p id="map">
+                <a href="https://goo.gl/maps/GtMv76xGJpVJ2jjv5" id="map1">📍 Location Map
+                </a>
+            </p>
+            <p>Weather API by openweathermap.org</p>
+        </div>
+        <hr />
+        <p>
+            ©<span id="year"></span> My City Chamber .:|:. Noluthando Zilimbola-Mothata .:|:. WDD230
+             Project .:|:. Last Updated: <span id="lastModified"></span>
+        </p>
+    </footer>
+    <script src="scripts/main.js"></script>
+    <script src="scripts/windchill.js"></script>
+</body>
+
+</html>
