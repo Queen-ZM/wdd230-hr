@@ -12,9 +12,9 @@ const figcaption = document.createElement('figcaption');
 figure.appendChild(figcaption);
 const captionDesc = document.querySelector('figcaption');
 
-const cityName = "Johannecburg";
+const cityName = "Johannesburg";
 const apiID = "7fae69e9db7f6cc9a7268bfc37203f6b";
-const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiID}&units=imperial`;
+const url = `https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${apiID}&units=metric`;
 
 async function apiFetch(){
   try {
