@@ -1,5 +1,5 @@
 const year = document.querySelector("#year");
-const lastModified = document.querySelector("#lastModified");
+let lastModified = document.querySelector("#lastModified");
 
 //Display on the screen the date of the last time there was a modification.
 lastModified.textContent = document.lastModified;
@@ -9,7 +9,7 @@ year.textContent = `${new Date().getFullYear()}`;
 
 const datefield = document.querySelector(".Currentdate");
 const now = new Date();
-const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
+const fulldate = new Intl.DateTimeFormat("en-ZA", { dateStyle: "full" }).format(
 	now
 );
 
