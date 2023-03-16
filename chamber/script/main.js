@@ -1,5 +1,5 @@
 const year = document.querySelector("#year");
-let lastModified = document.querySelector("#lastModified");
+const lastModified = document.querySelector("#lastModified");
 
 //Display on the screen the date of the last time there was a modification.
 lastModified.textContent = document.lastModified;
@@ -57,3 +57,5 @@ document.getElementById("facebook").onclick = function () {
 document.getElementById("instagram").onclick = function () {
     window.location.href = "https://www.instagram.com";
 };
+
+apiFetch();
