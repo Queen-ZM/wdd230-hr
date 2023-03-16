@@ -25,7 +25,7 @@ menuButton.addEventListener('click', function() {
 function toggleMenu() {
     const navElement = document.querySelector('#primaryNav');
     navElement.classList.toggle('open');
-    document.querySelector('#menuButton').classList.toggle("open");
+    document.querySelector('#menuButton').classList.toggle('open');
 }
 
 const p = document.createElement('p');
