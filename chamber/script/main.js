@@ -1,5 +1,5 @@
-const year = document.querySelector("#year");
-const lastModified = document.querySelector("#lastModified");
+const year = document.querySelector('#year');
+const lastModified = document.querySelector('#lastModified');
 
 //Display on the screen the date of the last time there was a modification.
 lastModified.textContent = document.lastModified;
