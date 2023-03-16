@@ -1,15 +1,17 @@
 const year = document.querySelector('#year');
-const lastModified = document.querySelector('#lastModified');
+
 
 //Display on the screen the date of the last time there was a modification.
-lastModified.textContent = document.lastModified;
+document.querySelector(
+    "#lastModified"
+        .textContent) = `Last Modification: ${document.lastModified}`;
 
 //Display on the screen the current year.
 year.textContent = `${new Date().getFullYear()}`;
 
 const datefield = document.querySelector(".Currentdate");
 const now = new Date();
-const fulldate = new Intl.DateTimeFormat("en-ZA", { dateStyle: "full" }).format(
+const fulldate = new Intl.DateTimeFormat("en-US", { dateStyle: "full" }).format(
 	now
 );
 
@@ -91,17 +93,3 @@ async function apiFetch(){
   }
 }
 
-function displayResults(weatherData){
-    currentTemp.innerHTML = `<strong>${weatherData.main.temp.toFixed(0)}</strong>`;
-    const iconsrc = `https://openweathermap.org/img/w/${weatherData.weather[0].icon}.png`;
-    const desc = weatherData.weather[0].description;
-
-
-    img.setAttribute('src', iconsrc);
-    img.setAttribute('alt', desc);
-
-    captionDesc.textContent = desc.toUpperCase();
-    
-}
-
-apiFetch(); //Call apiFetch function for the first time.
